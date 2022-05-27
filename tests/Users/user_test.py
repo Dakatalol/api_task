@@ -7,7 +7,6 @@ from Data.Users.single_user import user_id_2, invalid_user
 from Data.Users.new_user import RANDOM_NEW_USER
 from utils.Utils import Utils
 
-env = os.environ["env"].upper()
 pytestmark = [pytest.mark.regression, pytest.mark.smome]
 
 
