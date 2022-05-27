@@ -3,8 +3,6 @@ from faker import Faker
 
 class Utils:
 
-
-
     @staticmethod
     def sort_user_by_first_name(list_of_users):
         """
@@ -20,4 +18,3 @@ class Utils:
     @staticmethod
     def generate_random_job():
         return Faker().job()
-

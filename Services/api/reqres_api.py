@@ -1,5 +1,9 @@
 import requests
 
+"""
+6. Parametrize base URL
+"""
+
 
 class ReqresApi:
     """
@@ -9,7 +13,6 @@ class ReqresApi:
     base_url = f'https://reqres.in/api/'
     auth = None
     headers = {'Content-Type': 'application/json'}
-    params = {}
 
     # GET Requests
     @classmethod

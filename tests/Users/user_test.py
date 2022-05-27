@@ -1,4 +1,3 @@
-import os
 import pytest
 
 from Services.api.reqres_api import ReqresApi
