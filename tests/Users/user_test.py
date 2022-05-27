@@ -2,7 +2,7 @@ import pytest
 
 from Services.api.reqres_api import ReqresApi
 from Data.Users.list_users import LIST_OF_USERS_ON_PAGE_1
-from Data.Users.single_user import user_id_2, invalid_user
+from Data.Users.single_user import USER_ID_2, INVALID_USER
 from Data.Users.new_user import RANDOM_NEW_USER
 from utils.Utils import Utils
 
@@ -52,10 +52,10 @@ def test_extract_user_by_id_and_verify_response():
     GET /api/users/{USER_ID}
     Execute one or many JSON Response Assertions
     """
-    response = ReqresApi.get_user_by_id(user_id_2['INPUT_REQUEST_BODY'])
+    response = ReqresApi.get_user_by_id(USER_ID_2['INPUT_REQUEST_BODY'])
     result = response.json()
 
-    assert result == user_id_2['EXPECTED_RESPONSE_BODY']
+    assert result == USER_ID_2['EXPECTED_RESPONSE_BODY']
 
 
 @pytest.mark.smoke
@@ -64,11 +64,11 @@ def test_extract_invalid_user_by_id_and_verify_response():
     GET /api/users/{USER_ID}
     Execute one or many assertions
     """
-    response = ReqresApi.get_user_by_id(invalid_user['INPUT_REQUEST_BODY'])
+    response = ReqresApi.get_user_by_id(INVALID_USER['INPUT_REQUEST_BODY'])
     result = response.json()
 
     assert response.status_code == 404
-    assert result == invalid_user['EXPECTED_RESPONSE_BODY']
+    assert result == INVALID_USER['EXPECTED_RESPONSE_BODY']
 
 
 @pytest.mark.smoke

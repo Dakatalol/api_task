@@ -1,4 +1,4 @@
-user_id_2 = {
+USER_ID_2 = {
     'INPUT_REQUEST_BODY':
         2
     ,
@@ -18,7 +18,7 @@ user_id_2 = {
 
 }
 
-invalid_user = {
+INVALID_USER = {
     'INPUT_REQUEST_BODY':
         2222222222
     ,
