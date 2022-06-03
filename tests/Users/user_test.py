@@ -6,7 +6,6 @@ from Data.Users.single_user import USER_ID_2, INVALID_USER
 from Data.Users.new_user import RANDOM_NEW_USER
 from utils.Utils import Utils
 
-pytestmark = [pytest.mark.regression, pytest.mark.smome]
 
 
 @pytest.mark.smoke
