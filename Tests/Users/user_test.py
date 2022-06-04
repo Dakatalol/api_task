@@ -6,8 +6,6 @@ from Data.Users.single_user import USER_ID_2, INVALID_USER
 from Data.Users.new_user import RANDOM_NEW_USER
 from Utils.Utils import Utils
 
-#pytestmark = [pytest.mark.regression, pytest.mark.smoke]
-
 
 @pytest.mark.smoke
 def test_verify_user_list_is_returned_correct():
