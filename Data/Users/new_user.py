@@ -1,4 +1,4 @@
-from utils.Utils import Utils
+from Utils.Utils import Utils
 
 RANDOM_NEW_USER = {
     'INPUT_REQUEST_BODY':

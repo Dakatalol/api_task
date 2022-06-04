@@ -158,8 +158,8 @@ drivers/
 results/
 core/__init__.py
 pages/__init__.py
-tests/__init__.py
-utils/__init__.py
+Tests/__init__.py
+Utils/__init__.py
 .pytest_cache
 
 

@@ -4,9 +4,9 @@ from Services.api.reqres_api import ReqresApi
 from Data.Users.list_users import LIST_OF_USERS_ON_PAGE_1
 from Data.Users.single_user import USER_ID_2, INVALID_USER
 from Data.Users.new_user import RANDOM_NEW_USER
-from utils.Utils import Utils
+from Utils.Utils import Utils
 
-pytestmark = [pytest.mark.regression, pytest.mark.smome]
+#pytestmark = [pytest.mark.regression, pytest.mark.smoke]
 
 
 @pytest.mark.smoke

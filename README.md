@@ -1,31 +1,33 @@
-## Installation
+# REST API Task
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install packages.
+## Description
 
-```bash
-pip install pipenv
-```
-```bash
-pipenv install
-```
-```bash
-pipenv shell
-```
-Verify that C://Users/[YOUR_USER]/.virtualenvs is present with a folder inside with the following pattern: ​"api_task--.xxxxxxx"
+Use the [following](https://reqres.in/) public REST API to complete scenario steps.
 
-Open your Pycharm -> File -> Settings ->
-Project:[PROJECT_NAME]#->Settings_Button->Add->Virtual Environment->Existing Environnment and press the "..." button. Navigate to the  C://Users/[YOUR_USER]/.virtualenvs/api_task--.xxxxxxx/Scripts and select python.exe
+The following tools/libraries can be used:
+* JMeter -> Download [here](https://jmeter.apache.org/download_jmeter.cgi)
+* Postman -> Download [here](https://www.postman.com/downloads/)
+* Pure code implementation for testing REST services (REST-Assured for Java, RestSharp for .Net, Requests for Python or any other)
 
-## Running the tests
+Organize your solution in a zip archive and send it back. 
+Note! Please remove all the compiled/built data, if any. 
 
-Run from inside project directory.
-
-to run a specific test:
-```
-py.test tests/user_test.py
-```
-
-Pytest can autodiscover all tests:
-````
-py.test C:\automation\api_task\tests
-````
+## Scenario
+1. List available users
+	- GET */api/users?page=1*
+	- Execute one or many JSON Response Assertions
+	- Extract single user details (Id, Email)
+	- (Optional) Extract all users, sort them by First Name alphabetically. Print sorted collection.
+2. Get extracted user details
+	- GET */api/users/{USER_ID}*
+	- Execute one or many JSON Response Assertions
+3. Try to get details of user that doesn't exist
+	- GET */api/users/{USER_ID}*
+	- Execute one or many Assertions
+4. Create UNIQUE new user
+	- POST */api/users*
+	- Execute one or many JSON Response Assertions
+5. Delete newly created user
+	- DELETE */api/users/{USER_ID}*
+	- Execute one or many Assertions
+6. Parameterize base URL
