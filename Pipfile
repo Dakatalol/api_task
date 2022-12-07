@@ -6,11 +6,12 @@ name = "pypi"
 [dev-packages]
 
 [packages]
-pytest = "<6.1.0"
+pytest = "*"
 pytest-xdist = "*"
 pytest-rerunfailures = "*"
 requests = "*"
 faker = "*"
+requests_oauthlib = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "*"

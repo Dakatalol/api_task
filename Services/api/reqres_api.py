@@ -1,4 +1,5 @@
 import requests
+from Utils.api_utility import ApiInteractions
 
 """
 6. Parametrize base URL
@@ -17,18 +18,24 @@ class ReqresApi:
     # GET Requests
     @classmethod
     def get_list_of_users_per_page(cls, page_number):
-        return requests.get(cls.base_url + 'users/?page=' + str(page_number), headers=cls.headers)
+        return ApiInteractions.get(cls.base_url + 'users/?page=' + str(page_number),
+                                   header_data=cls.headers)
 
     @classmethod
     def get_user_by_id(cls, user_id):
-        return requests.get(cls.base_url + 'users/' + str(user_id), headers=cls.headers)
+        return ApiInteractions.get(cls.base_url + 'users/' + str(user_id),
+                                   header_data=cls.headers)
 
     # POST Requests
     @classmethod
     def create_user(cls, json):
-        return requests.post(cls.base_url + 'users/', headers=cls.headers, json=json)
+        return ApiInteractions.post(cls.base_url + 'users/',
+                                    header_data=cls.headers,
+                                    json=json)
 
     # DELETE Requests
     @classmethod
     def delete_user(cls, user_id):
-        return requests.delete(cls.base_url + 'users/' + user_id, headers=cls.headers)
+        return ApiInteractions.delete(cls.base_url + 'users/' + user_id,
+                                      header_data=cls.headers)
+
